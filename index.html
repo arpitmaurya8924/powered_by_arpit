@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#190b24">
+<title>For My Bccchawww 🌚❤️</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--pink:#ff78ad;--purple:#bd7aff;--white:#fff0f8}
+body{
+ min-height:100vh;color:var(--white);text-align:center;
+ font-family:'Trebuchet MS',sans-serif;
+ background:radial-gradient(ellipse at top,#622746,#29152f 48%,#100817);
+ overflow-x:hidden;
+}
+#sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.float{position:absolute;bottom:-45px;animation:floatUp linear infinite;opacity:.8}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+main{position:relative;z-index:1;max-width:620px;margin:auto;padding:28px 16px 20px}
+.tag{color:#ffc4df;font-size:10px;letter-spacing:3px}
+h1{font-size:clamp(31px,8vw,46px);margin:18px 0}
+h1 span{color:var(--pink)}
+h2{font-size:25px;margin:16px 0}
+p{color:#f8ddec;font-size:15px;line-height:1.85;margin:13px 0}
+button{
+ border:0;border-radius:50px;padding:14px 21px;color:white;
+ font-size:14px;font-weight:bold;background:linear-gradient(110deg,#ff478d,#a44bff);
+ box-shadow:0 6px 25px #ff478d35;margin:7px;cursor:pointer;transition:.25s
+}
+button:hover{transform:translateY(-3px) scale(1.02)}
+button:active{transform:scale(.96)}
+.secondary{background:#ffffff12;border:1px solid #ffffff30;box-shadow:none}
+.card{
+ margin:24px auto;padding:27px 18px;max-width:490px;border-radius:25px;
+ background:#ffffff0d;border:1px solid #ffb2d52b;backdrop-filter:blur(12px);
+ box-shadow:0 15px 55px #0003;animation:appear .6s ease
+}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.hidden{display:none!important}
+.emoji{display:block;font-size:65px;margin:16px}
+.progress{height:4px;background:#ffffff19;border-radius:9px;overflow:hidden;margin:22px 0}
+#bar{height:100%;width:0;background:linear-gradient(90deg,#ff599e,#d89aff);transition:width .5s}
+.gift{display:block;font-size:100px;animation:bounce 1.4s infinite}
+@keyframes bounce{50%{transform:translateY(-12px) rotate(5deg)}}
+.letter{
+ white-space:pre-line;text-align:left;line-height:1.9;padding:20px;
+ border-radius:17px;background:#ffb6d40c;border:1px solid #ffb6d426;
+ color:#ffe5f0;font-size:14px;overflow-wrap:anywhere
+}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}
+.memory{padding:17px 4px;background:#ffffff0c;border-radius:15px;font-size:27px}
+.memory small{display:block;font-size:11px;color:#f5cde0;margin-top:8px}
+.bigheart{display:block;font-size:90px;animation:beat 1.2s infinite}
+@keyframes beat{50%{transform:scale(1.15)}}
+footer{position:relative;z-index:1;padding:20px 12px 35px;color:#d7b5ce;font-size:12px;line-height:1.9}
+.dev{font-size:25px;letter-spacing:1px;color:white}
+.dev span{color:#ff82b4}
+.final-name{font-size:26px;color:#ff82b4;margin-top:15px}
+</style>
+</head>
+
+<body>
+<div id="sky"></div>
+
+<main>
+<div class="tag">A LITTLE SURPRISE MADE WITH LOVE ✨</div>
+<h1>Oyeee <span>Bccchawww!</span> 🌚❤️</h1>
+<p>Madam Jiiii, aapke liye ek special surprise he! 🥹🎀</p>
+<div class="progress"><div id="bar"></div></div>
+
+<section class="card scene" id="s0">
+ <span class="emoji">💌</span>
+ <h2>Hellooo, meri Bccchawww! 🧸</h2>
+ <p>Oyeee Bacchawww 🌚❤️, aapke liye ek chhota sa gift banaya he!</p>
+ <p>Last tak dekhna, Madam Ji. Aapke liye ek special letter bhi he. 😭💗</p>
+ <button onclick="go(1)">OPEN MY SURPRISE 💗</button>
+</section>
+
+<section class="card scene hidden" id="s1">
+ <span class="emoji">🦋</span>
+ <h2>Madam Jiiii 👑🌚</h2>
+ <p>Aapke nakhre alag, aapki baatein alag aur aapki friendship wali jagah bhi alag. 😂❤️</p>
+ <p>Bas aise hi haste rehna, Bccchawww! 🎀</p>
+ <button onclick="go(2)">NEXT SURPRISE 🫶</button>
+</section>
+
+<section class="card scene hidden" id="s2">
+ <span class="emoji">🎁</span>
+ <h2>Your little gift is here!</h2>
+ <p>Ready ho, meri Bccchawww? 🌚💗</p>
+ <span class="gift" id="giftIcon">🎁</span>
+ <button id="openGift" onclick="giftOpen()">UNWRAP YOUR GIFT 🎀</button>
+ <div id="giftReveal" class="hidden">
+  <span class="emoji">🧸🌸💝</span>
+  <h2>SURPRISEEEE! 😭❤️</h2>
+  <p>A virtual hug, flowers aur chocolates meri Madam Ji ke liye! 🫂</p>
+  <p>Gift chhota sa he, lekin affection bohot saari. 💗</p>
+  <button onclick="go(3)">AAGE CHALEIN? 🌝</button>
+ </div>
+</section>
+
+<section class="card scene hidden" id="s3">
+ <span class="emoji">💖</span>
+ <h2>Sunno meri Bccchawww 🥹</h2>
+ <div class="letter">🌷 Aap special ho, Madam Ji.
+
+🫶 Aapki feelings matter karti hain.
+
+✨ Aap jaisi ho, waise hi appreciated rehne deserve karti ho.
+
+❤️ Hamesha khush rehna aur apni smile ko kabhi mat bhoolna!</div>
+ <button onclick="go(4)">AUR SUNO 😂💗</button>
+</section>
+
+<section class="card scene hidden" id="s4">
+ <span class="emoji">🌸</span>
+ <h2>Reasons you're special</h2>
+ <p id="reason">Your smile can brighten an ordinary day. 🌷</p>
+ <button onclick="nextReason()">ANOTHER REASON 🥹</button>
+ <button class="secondary" onclick="go(5)">CONTINUE →</button>
+</section>
+
+<section class="card scene hidden" id="s5">
+ <span class="emoji">📸</span>
+ <h2>Our little memory corner</h2>
+ <p>Random baatein, silly jokes aur woh moments jab bina reason hansi aa jaati he. 😂❤️</p>
+ <div class="gallery">
+  <div class="memory">🌷<small>Sweet Talks</small></div>
+  <div class="memory">😂<small>Nakhre</small></div>
+  <div class="memory">🫶<small>Our Bond</small></div>
+  <div class="memory">🌙<small>Late Chats</small></div>
+  <div class="memory">🎀<small>Madam Ji</small></div>
+  <div class="memory">💝<small>Bccchaw</small></div>
+ </div>
+ <p>Ek din aur bhi memories add karenge, meri Bccchawww! 🌸</p>
+ <button onclick="go(6)">OPEN MY LETTER 💌</button>
+</section>
+
+<section class="card scene hidden" id="s6">
+ <span class="emoji">💌</span>
+ <h2>Meri Bccchawww ke naam ❤️</h2>
+ <div class="letter" id="letter"></div>
+ <button onclick="go(7)">ONE MORE THING 🥹</button>
+</section>
+
+<section class="card scene hidden" id="s7">
+ <span class="emoji">🫶</span>
+ <h2>A little promise 🌷</h2>
+ <p>Madam Ji, I hope aapki life happiness, peace aur beautiful memories se bhari rahe.</p>
+ <p>Hum haste rahein, silly jokes share karein aur ek doosre ko support karte rahein. 🌝❤️</p>
+ <p>Friendship ka sabse beautiful part hota he bina pretend kiye apna real self reh paana. 💗</p>
+ <button onclick="go(8)">FINAL SURPRISE ✨</button>
+</section>
+
+<section class="card scene hidden" id="s8">
+ <span class="emoji">🌠</span>
+ <h2>Make a little wish, Bccchawww!</h2>
+ <p>Ek beautiful si wish socho aur button tap karo. 🌸</p>
+ <button onclick="makeWish()">MAKE A WISH 💫</button>
+ <div id="wishReveal" class="hidden">
+  <span class="emoji">🌸💗🦋</span>
+  <p>May your dreams come closer, your worries feel lighter aur aapko har din smile karne ki koi na koi wajah mile. 🫶</p>
+  <button onclick="go(9)">LAST MESSAGE ❤️</button>
+ </div>
+</section>
+
+<section class="card scene hidden" id="s9">
+ <span class="bigheart">💗</span>
+ <h1>Oyeee <span>Bccchawww!</span> 🌚❤️</h1>
+ <p>Thank you for being yourself. Aapki friendship, aapki masti aur aapke nakhre is little gift ko aur special banate hain. 😂🎀</p>
+ <p>Hamesha khush rehna, Madam Ji. You deserve kindness, respect aur bohot saari happiness. 🥹❤️</p>
+ <h2>Lots of love & hugs 🫂</h2>
+ <p>Made this little surprise especially for you! 💌</p>
+ <button onclick="fireworks()">MORE HEARTS! 💕</button>
+ <button class="secondary" onclick="restart()">REPLAY SURPRISE ↻</button>
+</section>
+</main>
+
+<footer>
+ ♡ A little website, a lot of affection ♡
+ <br><br>
+ <div style="color:#ff82b4;letter-spacing:3px;font-size:11px">
+ DEVELOPED WITH 💗 BY
+ </div>
+ <div class="dev">Arpit <span>🌝❤️</span></div>
+ <div>Made with love & code 🎀</div>
+ <div class="final-name">Babita 💗</div>
+</footer>
+
+<script>
+const YOUR_NAME="Arpit";
+
+const reasons=[
+ "Bccchawww, your smile can brighten an ordinary day. 🌷",
+ "Madam Ji ke nakhre bhi ek alag level ke hain. 😂🌚",
+ "Aap deserve karti ho kindness, respect aur happiness. 💗",
+ "Your silly side makes conversations extra fun. 🧸",
+ "I'm grateful for the little memories we share. 🫶",
+ "Aap jaisi ho, waise hi special ho, Bccchawww. 🎀",
+ "May your days be filled with smiles and good memories. 🌸",
+ "Madam Ji, khush rehna aur haste rehna! ❤️"
+];
+
+const letterText=`Oyeee meri Bccchawww! 🥹🌚❤️
+
+Madam Jiiii, ye chhota sa gift especially aapke liye banaya he. 🎀
+
+Kabhi-kabhi words mein explain karna difficult hota he ki koi insaan kitna special he, isliye socha ek website hi bana doon! 😂💗
+
+Aapke nakhre, random baatein, silly moments aur woh chhoti-chhoti conversations friendship ko memorable banati hain.
+
+Bccchawww, I hope aap hamesha khush raho, apne dreams achieve karo aur life mein aise log pao jo aapki respect karein aur aapko genuinely samjhein. 🌷
+
+Aapko hamesha perfect hone ki zaroorat nahi he. Aap jaisi ho, waise hi respect aur kindness deserve karti ho. 🫶
+
+I hope hum aage bhi jokes share karein, random baaton par hasein aur beautiful memories banate rahein.
+
+Aur haan, Madam Ji, apni smile ko kabhi mat bhoolna! 🌝❤️
+
+Ye gift chhota sa he, but iske peeche bohot saari care aur affection he.
+
+Stay happy, meri Bccchawww. Hamesha aise hi apni cute si masti karti rehna. 🧸💗
+
+With lots of love,
+Arpit 🌝❤️`;
+
+let reasonIndex=0;
+let letterStarted=false;
+let typingTimer=null;
+
+function go(n){
+ document.querySelectorAll(".scene").forEach(el=>el.classList.add("hidden"));
+ document.getElementById("s"+n).classList.remove("hidden");
+ document.getElementById("bar").style.width=(n/9*100)+"%";
+ window.scrollTo({top:0,behavior:"smooth"});
+ if(n===6)typeLetter();
+}
+
+function giftOpen(){
+ document.getElementById("giftIcon").classList.add("hidden");
+ document.getElementById("openGift").classList.add("hidden");
+ document.getElementById("giftReveal").classList.remove("hidden");
+ burst("💗",22);
+}
+
+function nextReason(){
+ reasonIndex=(reasonIndex+1)%reasons.length;
+ document.getElementById("reason").textContent=reasons[reasonIndex];
+}
+
+function typeLetter(){
+ if(letterStarted)return;
+ letterStarted=true;
+ const el=document.getElementById("letter");
+ let i=0;
+ function tick(){
+  el.textContent=letterText.slice(0,i);
+  i+=3;
+  if(i<=letterText.length)typingTimer=setTimeout(tick,18);
+ }
+ tick();
+}
+
+function makeWish(){
+ document.getElementById("wishReveal").classList.remove("hidden");
+ fireworks();
+}
+
+function burst(symbol="💗",count=18){
+ for(let i=0;i<count;i++){
+  const el=document.createElement("span");
+  el.textContent=symbol;
+  el.style.cssText=`
+   position:fixed;left:${Math.random()*100}vw;
+   top:${30+Math.random()*55}vh;
+   font-size:${18+Math.random()*24}px;
+   z-index:10;pointer-events:none;
+   transition:transform 1.5s ease,opacity 1.5s ease;`;
+  document.body.appendChild(el);
+  requestAnimationFrame(()=>{
+   el.style.transform=`translate(${Math.random()*180-90}px,${-80-Math.random()*180}px) rotate(${Math.random()*220}deg)`;
+   el.style.opacity="0";
+  });
+  setTimeout(()=>el.remove(),1600);
+ }
+}
+
+function fireworks(){
+ ["💗","💖","💕","✨","💝","🌸","🦋"].forEach((v,i)=>{
+  setTimeout(()=>burst(v,12),i*120);
+ });
+}
+
+function restart(){
+ clearTimeout(typingTimer);
+ letterStarted=false;
+ document.getElementById("letter").textContent="";
+ document.getElementById("giftIcon").classList.remove("hidden");
+ document.getElementById("openGift").classList.remove("hidden");
+ document.getElementById("giftReveal").classList.add("hidden");
+ document.getElementById("wishReveal").classList.add("hidden");
+ reasonIndex=0;
+ document.getElementById("reason").textContent=reasons[0];
+ go(0);
+}
+
+const sky=document.getElementById("sky");
+for(let i=0;i<30;i++){
+ const el=document.createElement("span");
+ el.className="float";
+ el.textContent=["♡","💗","✦","💕","✨","🌸"][i%6];
+ el.style.left=Math.random()*100+"%";
+ el.style.animationDuration=(9+Math.random()*14)+"s";
+ el.style.animationDelay=(-Math.random()*18)+"s";
+ el.style.fontSize=(12+Math.random()*18)+"px";
+ sky.appendChild(el);
+}
+</script>
+</body>
+</html>
